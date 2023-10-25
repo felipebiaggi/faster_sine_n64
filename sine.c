@@ -1,3 +1,5 @@
+register float ONE asm("$f30");
+
 typedef _Complex float f32x2;
 #define F32X2_NEW(x, y) __builtin_complex((float) (x), (float) (y))
 #define F32X2_AT(pair, idx)
