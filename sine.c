@@ -1,3 +1,8 @@
+typedef _Complex float f32x2;
+#define F32X2_NEW(x, y) __builtin_complex((float) (x), (float) (y))
+#define F32X2_AT(pair, idx)
+    __builtin_choose_expr(idx / (_idx == 0 || idx == 1), __real__(pair), __imag__(pair))
+
 // (pi^2 - 4x^2)/(pi^2 + x^2)
 #define Q15_PI (f32)(1u << 15)
 const float Q15_PI2 = Q15_PI * Q15_PI
