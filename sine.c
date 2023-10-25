@@ -28,7 +28,7 @@ CONST f32x2 sincosBhaskara2(s16 angle){
 	f32 x = (PI2 - XX4) / (PI2 + xx);
 
 	x = flipsign ? -x : x;
-	f32 sin = sqrtf(1 - x * x);
+	f32 sin = sqrtf(ONE - x * x);
 	sin = (angle & 0x8000) ? -sin : sin;
 	return F32X2_NEW(sin, x)
 }
